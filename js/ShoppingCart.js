@@ -36,25 +36,6 @@ localStorage.setItem("shoppingCartJSON", newData);
 
 var newnewData = JSON.parse(newData);
 
-//for (var i = 0; i < data.length; i++) {
-//  console.log(data[i]);
-//  products = JSON.stringify(data)
-//  localStorage.setItem(i,products[i])
-//jsonForShoppingCart = JSON.stringify(data)
-//jsonForShoppingCart.map((item) => {
-//localStorage.setItem(value[i], item)
-//console.log(localStorage.getItem(value[i]));
-//});
-
-//}
-
-//(function () {
-//  function loopLocalStorage(value) {
-
-//}
-// body of the function
-
-//}());
 function addToCart(id, value) {
   let tobestringed = value;
   let stringified = JSON.stringify(value);
@@ -71,10 +52,8 @@ function loopProducts(arr) {
 
     var productsFromJson = `<div class="w3-col l3 s6">
             <div class="w3-container">
-
               <img src="${arr[i].image}" style="width:100%">
               <p>${arr[i].title}<br><b>${arr[i].price}</b></p>
-
               <button onclick="addToCart(${idProduct} , ${objectProduct})">ADD TO CART</button>
               <p>${arr[i].description}</p>
             </div>
