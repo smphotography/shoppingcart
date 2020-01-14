@@ -1,0 +1,32 @@
+{
+  "productList":[
+    {
+      "id": "0",
+      "imageFile": "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      "title": "Super Awesome Product",
+      "description": "This is the most awesome super product ever.",
+      "price": "$100.00"
+    },
+    {
+      "id": "1",
+      "imageFile": "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      "title": "The Awesome Book",
+      "description": "This is the best book ever. Must read it.",
+      "price": "$10.00"
+    },
+    {
+      "id": "2",
+      "imageFile": "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      "title": "Cheap Cell Phone",
+      "description": "This is the cheapest cell phone ever, and it works.",
+      "price": "$1.00"
+    },
+    {
+      "id": "3",
+      "imageFile": "https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687",
+      "title": "Amazing Toothpaste",
+      "description": "This toothpaste prevents cavities and stank breath",
+      "price": "$5.00"
+    }
+  ]
+}
