@@ -60,26 +60,21 @@ function addToCart(id, value) {
   let stringified = JSON.stringify(value);
   localStorage.setItem(id, value);
   console.log(localStorage.getItem(id));
-
 }
+
 function loopProducts(arr) {
   var i;
   for (i = 0; i < arr.length; i++) {
     console.log(arr[i]);
     var objectProduct = JSON.stringify(arr[i]);
-    var idProduct = arr[i].id
-
-    console.log(arr[i].image);
-    console.log(arr[i].title);
-    console.log(JSON.stringify(arr[i]));
-
+    var idProduct = arr[i].id;
 
     var productsFromJson = `<div class="w3-col l3 s6">
             <div class="w3-container">
 
               <img src="${arr[i].image}" style="width:100%">
               <p>${arr[i].title}<br><b>${arr[i].price}</b></p>
-              <button>${arr[i].id}, ${JSON.stringify(arr[i])}</button>
+
               <button onclick="addToCart(${idProduct} , ${objectProduct})">ADD TO CART</button>
               <p>${arr[i].description}</p>
             </div>
