@@ -1,0 +1,24 @@
+{
+  "id" : {
+    "1": {
+      "image": "https://picsum.photos/500",
+      "title": "super awesome product",
+      "description": "Oh my gosh! is this so awesme"
+    },
+    "2": {
+      "image": "https://picsum.photos/500",
+      "title": "super awesome product",
+      "description": "Oh my gosh! is this so awesme"
+    },
+    "3": {
+      "image": "https://picsum.photos/500",
+      "title": "super awesome product",
+      "description": "Oh my gosh! is this so awesme"
+    },
+    "4": {
+      "image": "https://picsum.photos/500",
+      "title": "super awesome product",
+      "description": "Oh my gosh! is this so awesme"
+    }
+  }
+}
