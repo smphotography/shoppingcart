@@ -1,12 +1,9 @@
 // Variables from DOM
 
-var gridContainer = document.getElementsByClassName("w3-grayscale")[0];
+var gridContainer = document.getElementsByClassName("w3-half")[0];
 var cartContainer = document.getElementsByClassName("cartContainer");
 
-// Methods
-
-// set variable data for global use
-
+// json for displaying the products
 var data = [
   {
     image: "https://picsum.photos/300",
@@ -30,31 +27,17 @@ var data = [
     id: 3
   }
 ];
-var newData = JSON.stringify(data);
 
-localStorage.setItem("shoppingCartJSON", newData);
-
-var newnewData = JSON.parse(newData);
-
-function addToCart(id, value) {
-  let tobestringed = value;
-  let stringified = JSON.stringify(value);
-  localStorage.setItem(id, value);
-  console.log(localStorage.getItem(id));
-}
-
-function loopProducts(arr) {
+// display products
+function productDisplay(arr) {
   var i;
   for (i = 0; i < arr.length; i++) {
     console.log(arr[i]);
-    var objectProduct = JSON.stringify(arr[i]);
-    var idProduct = arr[i].id;
-
     var productsFromJson = `<div class="w3-col l3 s6">
             <div class="w3-container">
               <img src="${arr[i].image}" style="width:100%">
               <p>${arr[i].title}<br><b>${arr[i].price}</b></p>
-              <button onclick="addToCart(${idProduct} , ${objectProduct})">ADD TO CART</button>
+              <button onclick="addToCart(${arr[i]},${arr[i].id})">ADD TO CART</button>
               <p>${arr[i].description}</p>
             </div>
           </div>`;
@@ -62,4 +45,29 @@ function loopProducts(arr) {
     gridContainer.innerHTML += productsFromJson;
   }
 }
-loopProducts(data);
+productDisplay(data);
+
+// cart manipulation
+function addToCart(product, id) {
+  let itemStringified = JSON.stringify(product);
+  let idStringified = id;
+  localStorage.setItem(id, itemStringified);
+  updateCart(id)
+}
+// cart update
+function updateCart(id) {
+  console.log(id);
+  let getLocalStorage = localStorage.getItem(id)
+  let parsedItem = JSON.parse(getLocalStorage)
+  var i;
+  for (var i = 0; i < parsedItem.length; i++) {
+    var productsFromLocal = `<div class="w3-col l3 s6">
+            <div class="w3-container">
+              <img src="${parsedItem[i].image}" style="width:100%">
+              <p>${parsedItem[i].title}<br><b>${parsedItem[i].price}</b></p>
+              <p>${parsedItem[i].description}</p>
+            </div>
+          </div>`;
+          cartContainer.innerHTML += productsFromLocal;
+  }
+}
